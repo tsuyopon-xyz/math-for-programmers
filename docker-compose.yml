@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  anaconda3:
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: 'math-for-programmers'
+    ports:
+      - '7777:8888'
+    working_dir: '/workdir/contents'
+    tty: true
+    volumes:
+      - ./contents:/workdir/contents
