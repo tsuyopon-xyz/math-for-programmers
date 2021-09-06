@@ -8,6 +8,8 @@ FROM continuumio/anaconda3:2019.03
 #   pip install tensorflow
 
 RUN pip install --upgrade pip
+RUN pip install PyGame
+RUN pip install PyOpenGL
 
 # コンテナ側のルート直下にworkdir/（任意）という名前の作業ディレクトリを作り移動する
 WORKDIR /workdir
